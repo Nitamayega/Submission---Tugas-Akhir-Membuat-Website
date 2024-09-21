@@ -381,7 +381,7 @@ footer {
     .nav-list {
         width: 100%;
         justify-content: space-evenly;
-        gap: auto;
+        gap: 0;
     }
 
     .nav-list li a {
