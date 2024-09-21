@@ -1,3 +1,6 @@
+/* ======================== */
+/* Global Styles */
+/* ======================== */
 *,
 *::before,
 *::after {
@@ -10,20 +13,134 @@ html {
 
 body {
     font-family: 'Source Code Pro', monospace;
-
     height: 100vh;
     margin: 0;
-    
     display: flex;
     flex-direction: column;
-    
-    background-color: #fff6f6;
+    background-color: #FFF6F6;
 }
 
 ul {
-    padding-inline-start: 0px;
+    padding-inline-start: 0;
 }
 
+/* ======================== */
+/* Dark Mode Styles */
+/* ======================== */
+body.dark-mode {
+    background-color: #181C14;
+    color: #FFF6F6;
+}
+
+body.dark-mode p,
+body.dark-mode label {
+    color: #FFF6F6;
+}
+
+body.dark-mode .nav-list li:hover a,
+body.dark-mode .skills-list li:hover,
+body.dark-mode .project-features li:hover {
+    background-color: #ECDFCC;
+    color: #181C14;
+}
+
+body.dark-mode .btn-submit:hover,
+body.dark-mode aside .social-media li a:hover {
+    background-color: #697565;
+}
+
+body.dark-mode .skills-list li,
+body.dark-mode .project-features li,
+body.dark-mode .home {
+    background-color: #181C14;
+}
+
+body.dark-mode header,
+body.dark-mode aside,
+body.dark-mode .btn-submit:hover,
+body.dark-mode footer {
+    background-color: #697565;
+}
+
+body.dark-mode .section h2,
+body.dark-mode .home-title-color {
+    color: #A5B68D;
+}
+
+body.dark-mode .section,
+body.dark-mode .card {
+    background-color: #3C3D37;
+}
+
+.navbar-container.dark-mode {
+    background-color: #1F1F1F;
+}
+
+.card.dark-mode {
+    background-color: #2C2C2C;
+}
+
+/* ======================== */
+/* Slider Toggle */
+/* ======================== */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+#toggle-label {
+    font-size: 16px;
+}
+
+/* ======================== */
+/* Header Styles */
+/* ======================== */
 header {
     background-color: #A5B68D;
     color: white;
@@ -79,6 +196,9 @@ header {
     font-weight: bold;
 }
 
+/* ======================== */
+/* Main Section Styles */
+/* ======================== */
 main {
     flex: 1;
     padding: 6rem 2rem;
@@ -190,6 +310,9 @@ main {
     position: relative;
 }
 
+/* ======================== */
+/* Feedback Form Styles */
+/* ======================== */
 .feedback-form label {
     font-size: 1.1rem;
     color: #555;
@@ -232,6 +355,9 @@ main {
     gap: 10px;
 }
 
+/* ======================== */
+/* Aside Styles */
+/* ======================== */
 aside {
     position: fixed;
     right: 0;
@@ -326,6 +452,9 @@ aside .social-media li a:hover {
     color: #C1CFA1;
 }
 
+/* ======================== */
+/* Footer Styles */
+/* ======================== */
 footer {
     text-align: center;
     background-color: #E7CCCC;
@@ -333,6 +462,9 @@ footer {
     width: 100%;
 }
 
+/* ======================== */
+/* Responsive Styles */
+/* ======================== */
 @media screen and (max-width: 1200px) {    
     main {
         width: 100%;
@@ -424,5 +556,9 @@ footer {
 
     .home h1 {
         font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: x-small;
     }
 }
